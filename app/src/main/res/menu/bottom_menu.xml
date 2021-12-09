@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/main"
+        android:title="Asosiy" />
+    <item
+        android:id="@+id/transfer"
+        android:icon="@drawable/transfer"
+        android:title="O'tkazma" />
+    <item
+        android:id="@+id/kirim"
+        android:icon="@drawable/kirimchiqim"
+        android:title="Kirim-chiqim" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+</menu>

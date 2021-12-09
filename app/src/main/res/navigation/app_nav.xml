@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.bank2.presentation.ui.screens.AuthStartScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/authGraph"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <navigation
+        android:id="@+id/authGraph"
+        app:startDestination="@id/authScreen">
+
+        <fragment
+            android:id="@+id/loginScreen"
+            android:name="uz.gita.bank2.presentation.ui.screens.AuthLoginScreen"
+            android:label="LoginScreen"
+            tools:layout="@layout/screen_login">
+            <action
+                android:id="@+id/action_loginScreen_to_registerScreen"
+                app:destination="@id/registerScreen" />
+            <action
+                android:id="@+id/action_loginScreen_to_verifyScreen"
+                app:destination="@id/verifyScreen" />
+
+        </fragment>
+        <fragment
+            android:id="@+id/registerScreen"
+            android:name="uz.gita.bank2.presentation.ui.screens.AuthRegisterScreen"
+            android:label="RegisterScreen"
+            tools:layout="@layout/screen_register">
+            <action
+                android:id="@+id/action_registerScreen_to_verifyScreen"
+                app:destination="@id/verifyScreen" />
+        </fragment>
+        <fragment
+            android:id="@+id/verifyScreen"
+            android:name="uz.gita.bank2.presentation.ui.screens.AuthVerifyScreen"
+            android:label="VerifyScreen"
+            tools:layout="@layout/screen_sms_verify">
+            <argument
+                android:name="phone"
+                app:argType="string" />
+            <argument
+                android:name="password"
+                app:argType="string" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_securityScreen"
+            app:destination="@id/securityScreen" />
+        <fragment
+            android:id="@+id/authScreen"
+            android:name="uz.gita.bank2.presentation.ui.screens.AuthScreen"
+            android:label="AuthScreen"
+            tools:layout="@layout/screen_auth">
+            <action
+                android:id="@+id/action_authScreen_to_loginScreen"
+                app:destination="@id/loginScreen" />
+            <action
+                android:id="@+id/action_authScreen_to_registerScreen"
+                app:destination="@id/registerScreen" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/securityScreen"
+        android:name="uz.gita.bank2.presentation.ui.screens.PinRegisterScreen"
+        android:label="SecurityScreen"
+        tools:layout="@layout/screen_pin_register" />
+    <fragment
+        android:id="@+id/pinEnterScreen"
+        android:name="uz.gita.bank2.presentation.ui.screens.PinEnterScreen"
+        android:label="PinEnterScreen"
+        tools:layout="@layout/screen_pin_enter" />
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.bank2.presentation.ui.screens.MainScreen"
+        android:label="MainScreen"
+        tools:layout="@layout/screen_main" />
+    <fragment
+        android:id="@+id/cardAddScreen"
+        android:name="uz.gita.bank2.presentation.ui.screens.CardAddScreen"
+        android:label="CardAddScreen"
+        tools:layout="@layout/card_add_screen" />
+    <fragment
+        android:id="@+id/pageHistoryScreen"
+        tools:layout="@layout/page_history"
+        android:name="uz.gita.bank2.presentation.ui.screens.PageHistoryScreen"
+        android:label="PageHistoryScreen" />
+    <fragment
+        android:id="@+id/pageMainScreen"
+        android:name="uz.gita.bank2.presentation.ui.screens.PageMainScreen"
+        android:label="PageMainScreen"
+        tools:layout="@layout/page_main" />
+    <fragment
+        android:id="@+id/pageTransferScreen"
+        tools:layout="@layout/page_transfer"
+        android:name="uz.gita.bank2.presentation.ui.screens.PageTransferScreen"
+        android:label="PageTransferScreen" />
+    <fragment
+        android:id="@+id/pageProfile"
+        android:name="uz.gita.bank2.presentation.ui.screens.PageProfile"
+        android:label="PageProfile"
+        tools:layout="@layout/page_profile" />
+    <fragment
+        android:id="@+id/cardVerifyScreen"
+        tools:layout="@layout/card_sms_verify"
+        android:name="uz.gita.bank2.presentation.ui.screens.CardVerifyScreen"
+        android:label="CardVerifyScreen" />
+</navigation>

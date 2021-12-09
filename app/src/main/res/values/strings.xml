@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bank2</string>
+    <string name="formatted_time">%02d:%02d</string>
+</resources>

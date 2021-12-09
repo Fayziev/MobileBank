@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashback">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:alpha=".8"
+        android:text="Register Pin Code"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.andrognito.patternlockview.PatternLockView
+        android:id="@+id/pin_lock_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:elevation="4dp"
+        app:correctStateColor="#1E88E5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:normalStateColor="@color/chuck_colorPrimary"
+        app:wrongStateColor="#E83131" />
+
+    <ImageView
+        android:id="@+id/biometric"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/biometric_icon"
+        app:layout_constraintLeft_toLeftOf="@id/pin_lock_view"
+        app:layout_constraintRight_toRightOf="@id/pin_lock_view"
+        app:layout_constraintTop_toBottomOf="@id/pin_lock_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Enter new password"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/pin_lock_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:alpha=".7"
+        android:text="Version 1.0.0"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/skipBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="Skip"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintHorizontal_bias=".7"
+        app:layout_constraintLeft_toRightOf="@id/title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

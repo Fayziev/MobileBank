@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "768559342584",
+    "project_id": "bank-158f3",
+    "storage_bucket": "bank-158f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768559342584:android:d699b5abce4a01e40e2c0d",
+        "android_client_info": {
+          "package_name": "uz.gita.bank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768559342584-6gp1o6va8hetquj84mcch44kcooe5olk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq0b5uhipcOU6DuYftn7iKMoUO1IPDTqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768559342584-6gp1o6va8hetquj84mcch44kcooe5olk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768559342584:android:36d7b85991bf88020e2c0d",
+        "android_client_info": {
+          "package_name": "uz.gita.bank2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768559342584-6gp1o6va8hetquj84mcch44kcooe5olk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq0b5uhipcOU6DuYftn7iKMoUO1IPDTqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768559342584-6gp1o6va8hetquj84mcch44kcooe5olk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
