@@ -21,6 +21,7 @@ fun OkHttpClient.Builder.addLoggingInterceptor(context: Context): OkHttpClient.B
     val logging = HttpLoggingInterceptor.Logger { message -> Timber.tag("HTTP").d(message) }
     if (BuildConfig.LOGGING) {
         addInterceptor(ChuckInterceptor(context))
+
             .addInterceptor(HttpLoggingInterceptor(logging))
     }
     return this
@@ -28,6 +29,7 @@ fun OkHttpClient.Builder.addLoggingInterceptor(context: Context): OkHttpClient.B
 
 fun addHeaderInterceptor(pref: MyPref) = Interceptor { chain ->
     val request = chain.request()
+
     val newRequest = request.newBuilder().removeHeader("token").addHeader("token", pref.accessToken).build()
     val response = chain.proceed(newRequest)
     response

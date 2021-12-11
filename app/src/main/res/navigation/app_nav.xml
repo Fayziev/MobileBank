@@ -115,4 +115,13 @@
         tools:layout="@layout/card_sms_verify"
         android:name="uz.gita.bank2.presentation.ui.screens.CardVerifyScreen"
         android:label="CardVerifyScreen" />
+    <fragment
+        android:id="@+id/cardEditScreen"
+        tools:layout="@layout/card_edit_screen"
+        android:name="uz.gita.bank2.presentation.ui.screens.CardEditScreen"
+        android:label="CardEditScreen" >
+        <argument
+            android:name="pan"
+            app:argType="string" />
+    </fragment>
 </navigation>

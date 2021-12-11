@@ -15,6 +15,7 @@ import uz.gita.bank2.data.retrofit.api.AuthApi
 import uz.gita.bank2.utils.addHeaderInterceptor
 import uz.gita.bank2.utils.addLoggingInterceptor
 import uz.gita.bank2.utils.refreshInterceptor
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
@@ -36,6 +37,8 @@ class NetworkModule {
     fun getOkHttpClient(pref: MyPref, @ApplicationContext context: Context): OkHttpClient =
         OkHttpClient.Builder()
             .addLoggingInterceptor(context)
+            .readTimeout(60, TimeUnit.SECONDS)
+            .writeTimeout(60,TimeUnit.SECONDS)
             .addInterceptor(refreshInterceptor(pref))
             .addInterceptor(addHeaderInterceptor(pref))
             .build()

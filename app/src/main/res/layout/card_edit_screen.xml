@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Card add"
+        android:text="Card Edit"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -158,36 +158,16 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/termLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Term"
-        app:endIconMode="clear_text"
-        app:layout_constraintEnd_toEndOf="@id/endGuid"
-        app:layout_constraintStart_toStartOf="@id/startGuid"
-        app:layout_constraintTop_toBottomOf="@id/inputCardNumber">
-
-        <br.com.sapereaude.maskedEditText.MaskedEditText
-            android:id="@+id/termEditText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:maxLength="5"
-            android:singleLine="true"
-            app:mask="##/##" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cardNumberLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Card Name"
+        android:hint="New Card Name"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="@id/endGuid"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@id/startGuid"
-        app:layout_constraintTop_toBottomOf="@id/termLayout">
+        app:layout_constraintTop_toBottomOf="@id/cardView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/cardNameEditText"
@@ -199,26 +179,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputCardNumber"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Card Number"
-        app:endIconMode="clear_text"
-        app:layout_constraintEnd_toEndOf="@id/endGuid"
-        app:layout_constraintStart_toStartOf="@id/startGuid"
-        app:layout_constraintTop_toBottomOf="@id/cardView">
-
-        <br.com.sapereaude.maskedEditText.MaskedEditText
-            android:id="@+id/cardNumberEditText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:singleLine="true"
-            app:mask="8600 #### #### ####" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/startGuid"
@@ -241,7 +201,6 @@
         android:text="Send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/endGuid"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/startGuid" />
 
     <androidx.core.widget.ContentLoadingProgressBar
